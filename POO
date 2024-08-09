@@ -1,0 +1,36 @@
+# criar uma classe
+# defina atributos e métodos
+class caneta:
+  cor = ''
+  carga = ''
+  forma = ''
+  tampa = False 
+  marca = '' 
+  def escrever(self,texto):
+    if (self.carga > 0 and self.tampa == False):
+      print(texto)
+    else:
+      print('não funfou')
+
+  def estaTampada(self):
+    if(self.tampa == True):
+      print('tem tampa!')
+    else:
+      print('não tem tampa!')
+
+  def __init__(self, cor, carga, marca, tampa, forma):
+    self.cor = cor
+    self.carga = carga
+    self.forma = marca
+    self.tampa = tampa
+    self.marca = forma
+
+# inicio do meu código POO
+
+print("Construindo a primeira caneta")
+primeiraCaneta = caneta("azul",100,"pilot",True,"cilindrica")
+print("Cor da caneta: ", primeiraCaneta.cor)
+primeiraCaneta.estaTampada()
+primeiraCaneta.escrever("hy, mini men")
+segundaCaneta = caneta("preta",90,"pilot",False,"cilindrica")
+segundaCaneta.escrever("yes, men")
